@@ -55,15 +55,15 @@
                 </div>
                 <div id="popover-content" class="hide">
                     <div class="cloud-apps">
-                        <a class="cloud-block" href="rps-show.jsp">
+                        <a class="cloud-block">
                             <i class="fa fa-3x fa-cubes"></i>
                             <div class="cloud-name">Research Papers</div>
                         </a>
-                        <a class="cloud-block" href="#">
+                        <a class="cloud-block">
                             <i class="fw fw-api fa-3x"></i>
                             <div class="cloud-name">Ontology</div>
                         </a>
-                        <a class="cloud-block" href="#">
+                        <a class="cloud-block">
                             <i class="fw fw-security fa-3x"></i>
                             <div class="cloud-name">Results</div>
                         </a>
@@ -173,16 +173,19 @@
                             <h2 class="app-type-name">PDF</h2>
                             <div class="app-description">
                             </div>
-                            <div class="button-bar">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" readonly>
+                                    <span class="input-group-btn">
+                                    <span class="btn btn-primary btn-file btn-upload-file">
+                                        Upload&hellip; <input type="file" multiple>
+                                    </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="button-bar" style="margin-top: 10px">
                                 <a href="#" class="cu-btn cu-btn-md cu-btn-gray"><i class="fa fa-book"></i> Documentation</a>
                             </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4 col-lg-5 description-action">
-                            <a href="" class="cu-btn cu-btn-md cu-btn-blue">
-                               <span class="fw-stack fw-lg btn-action-ico">
-                               <i class="fw fw-ring fw-stack-2x"></i>
-                               <i class="fw fw-add fw-stack-1x"></i>
-                               </span> Upload...</a>
                         </div>
                     </div>
                 </div>
@@ -285,7 +288,7 @@
         }
 
 
-    })
+    });
 
     $('.side-pane-trigger').click(function(){
         var rightPane = $('.right-pane');
@@ -298,6 +301,19 @@
             rightPane.animate({"left":"18em"}, "slow").addClass('visible');
             leftPane.animate({"left":"0em"}, "slow");
             $(this).find('i').removeClass('fa-reorder').addClass('fa-arrow-left');
+        }
+    });
+</script>
+<script type="application/javascript">
+    $('.btn-upload-file').on('fileselect', function(event, numFiles, label) {
+        debugger;
+        var input = $(this).parents('.input-group').find(':text'),
+                log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+        if( input.length ) {
+            input.val(log);
+        } else {
+            if( log ) alert(log);
         }
     });
 </script>

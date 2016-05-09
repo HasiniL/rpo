@@ -137,34 +137,8 @@
                     <i class="fa fa-2x fa-search"></i>
                 </div>
             </div>
-            <div class="row row-centered app-listing">
+            <div class="row row-centered app-listing" id="research-paper-container">
                 <!-- BOF listing block -->
-                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-
-                    <div class="cloud-app-listing app-color-one">
-                        <a href="#">
-
-                            <div class="app-icon">
-                                <img src="images/rpo/rdf.png" class="square-element">
-                            </div>
-
-                            <div class="app-name">
-                                Research Paper
-                            </div>
-                        </a>
-                        <a class="dropdown-toggle app-extra" data-toggle="dropdown">
-                            <i class="fa fa-ellipsis-v"></i>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </a>
-                        <ul class="dropdown-menu app-extra-menu" role="menu">
-                            <li><a href="#">View RDF</a></li>
-                            <li><a href="#">Delete</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
             </div>
         </div>
         <!-- /.container -->
@@ -177,29 +151,101 @@
             <div class="footer-text">www.slit.lk &copy; 2016 All Rights Reserved.</div>
         </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap-3.2.0/bootstrap.min.js"></script>
-    <!-- include custom js functions -->
-    <script src="js/custom/custom.js"></script>
-    <script>
-
-        $('.side-pane-trigger').click(function () {
-            var rightPane = $('.right-pane');
-            var leftPane = $('.left-pane');
-            if (rightPane.hasClass('visible')) {
-                rightPane.animate({"left": "0em"}, "slow").removeClass('visible');
-                leftPane.animate({"left": "-18em"}, "slow");
-                $(this).find('i').removeClass('fa-arrow-left').addClass('fa-reorder');
-            } else {
-                rightPane.animate({"left": "18em"}, "slow").addClass('visible');
-                leftPane.animate({"left": "0em"}, "slow");
-                $(this).find('i').removeClass('fa-reorder').addClass('fa-arrow-left');
-            }
-        });
-
-    </script>
 </div>
+<!-- Model for demote confirmation -->
+<div id="rdf-show-modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-margin-top-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close close-override" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">RDF Content</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="form">
+                            <div class="form-group">
+                                <label for="rdf-show-text" class="control-label" id="rdf-show-text-id"></label>
+                                <textarea class="form-control" id="rdf-show-text" style="min-height: 300px"
+                                          readonly></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap-3.2.0/bootstrap.min.js"></script>
+<!-- include custom js functions -->
+<script src="js/custom/custom.js"></script>
+<script>
+
+    $('.side-pane-trigger').click(function () {
+        var rightPane = $('.right-pane');
+        var leftPane = $('.left-pane');
+        if (rightPane.hasClass('visible')) {
+            rightPane.animate({"left": "0em"}, "slow").removeClass('visible');
+            leftPane.animate({"left": "-18em"}, "slow");
+            $(this).find('i').removeClass('fa-arrow-left').addClass('fa-reorder');
+        } else {
+            rightPane.animate({"left": "18em"}, "slow").addClass('visible');
+            leftPane.animate({"left": "0em"}, "slow");
+            $(this).find('i').removeClass('fa-reorder').addClass('fa-arrow-left');
+        }
+    });
+
+</script>
+<script type="application/javascript">
+    $(document).ready(function () {
+        $.get("rdf?getAll=true",
+              function (data) {
+                  if (!$.isEmptyObject(data)) {
+                      var content = "";
+                      $(data.files).each(function () {
+                          content += '<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">' +
+                                     '<div class="cloud-app-listing app-color-six">' +
+                                     '<a href="#">' +
+                                     '<div class="app-icon" style="background: #0498D5 !important;">' +
+                                     '<img src="images/rpo/rdf.png" class="square-element">' +
+                                     '</div>' +
+                                     '<div class="app-name">' +
+                                     this +
+                                     '</div>' +
+                                     '</a>' +
+                                     '<a class="dropdown-toggle app-extra" data-toggle="dropdown">' +
+                                     '<i class="fa fa-ellipsis-v"></i>' +
+                                     '<span class="sr-only">Toggle Dropdown</span>' +
+                                     '</a>' +
+                                     '<ul class="dropdown-menu app-extra-menu" role="menu">' +
+                                     '<li><a href="#" onclick="loadRDF(\'' + this + '\') ">View RDF</a></li>' +
+                                     '<li><a href="#">Delete</a></li>' +
+                                     '</ul>' +
+                                     '</div>' +
+                                     '</div>';
+                      });
+                      $("#research-paper-container").html(content);
+                  }
+              });
+    });
+</script>
+<script type="application/javascript">
+    function loadRDF(fileName) {
+        $("#rdf-show-text-id").text(fileName);
+        $.get("rdf?fileName=" + fileName,
+              function (data) {
+                  if (!$.isEmptyObject(data)) {
+                      $("#rdf-show-text").val(data);
+                      $('#rdf-show-modal').modal({show: true});
+                  }
+              });
+    }
+</script>
 </body>
 </html>
