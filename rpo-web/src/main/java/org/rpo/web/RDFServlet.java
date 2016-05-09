@@ -20,6 +20,7 @@ package org.rpo.web;
 
 import org.apache.jena.rdf.model.Model;
 import org.rpo.core.rdf.InMemoryModelStore;
+import org.rpo.core.rdf.RDFWriter;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -63,5 +64,17 @@ public class RDFServlet extends HttpServlet {
         }
 
         response.getWriter().println(returnString);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+                                                                                           IOException {
+
+        String fileName = request.getParameter("fileName");
+        if (fileName != null && !fileName.trim().isEmpty()) {
+            Model model = RDFWriter.getDummyRDF(fileName.trim());
+            RDFWriter.writeRDF(fileName, model);
+        }
+
+        response.setStatus(HttpServletResponse.SC_ACCEPTED);
     }
 }
