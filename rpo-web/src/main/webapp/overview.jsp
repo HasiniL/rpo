@@ -100,6 +100,9 @@
                 <a href="rps-show.jsp"><i class="fw fw-globe"></i> Research Papers</a>
             </li>
             <li>
+                <a href="sparql.jsp"><i class="fw fw-statistics"></i> SPARQL Results</a>
+            </li>
+            <li>
                 <a href="#"><i class="fw fw-bar-chart"></i> Ontology</a>
             </li>
             <li>

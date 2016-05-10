@@ -2,11 +2,11 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rpo="http://www.slit.lk/2016/rpo/1.0#">
   <rdf:Description rdf:about="http://www.slit.lk/2016/rpo/1.0#research=paper-3">
-    <rpo:References>Dummy references</rpo:References>
-    <rpo:Conclusion>Dummy conclusion</rpo:Conclusion>
-    <rpo:Keyword>Dummy,Key,Words</rpo:Keyword>
-    <rpo:Introduction>This is a dummy introduction</rpo:Introduction>
-    <rpo:Abstract>This is a dummy abstract</rpo:Abstract>
-    <rpo:Author>Tom Grey, Mike Vernon</rpo:Author>
+    <rpo:References>Dummy references3</rpo:References>
+    <rpo:Conclusion>Dummy conclusion3</rpo:Conclusion>
+    <rpo:Keyword>Dummy3,Key3,Words3</rpo:Keyword>
+    <rpo:Introduction>This is a dummy introduction3</rpo:Introduction>
+    <rpo:Abstract>This is a dummy abstract3</rpo:Abstract>
+    <rpo:Author>Tom Grey, Mike Vernon3</rpo:Author>
   </rdf:Description>
 </rdf:RDF>

@@ -84,7 +84,7 @@
                 <i class="fa fa-reorder"></i>
             </div>
             <div class="breadcrumb-secondary">
-                <i class="fw fw-document "></i> <span class="hidden-xs">Error</span>
+                <i class="fw fw-document "></i> <span class="hidden-xs">Overview</span>
             </div>
         </div>
     </div>
@@ -93,14 +93,14 @@
     <!-- left pane wrapper -->
     <div class="left-pane">
         <ul>
-            <li>
+            <li class="selected">
                 <a href="overview.jsp"><i class="fa fa-laptop"></i> Overview</a>
             </li>
             <li>
                 <a href="rps-show.jsp"><i class="fw fw-globe"></i> Research Papers</a>
             </li>
             <li>
-                <a href="sparql.jsp"><i class="fw fw-statistics"></i> SPARQL Results</a>
+                <a href="#"><i class="fw fw-statistics"></i> SPARQL Results</a>
             </li>
             <li>
                 <a href="#"><i class="fw fw-bar-chart"></i> Ontology</a>
@@ -113,15 +113,91 @@
     </div>
     <!-- left pane wrapper -->
     <div class="right-pane">
+        <div class="container-fluid">
+            <div class="row row-centered app-listing" id="research-paper-container">
+                <!-- BOF listing block -->
+                <div class="form-group">
+                    <button type="button" onclick="executeSPARQL('author')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All Authors
+                    </button>
+                    <button type="button" onclick="executeSPARQL('abstract')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All Abstracts
+                    </button>
+                    <button type="button" onclick="executeSPARQL('introduction')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All Introductions
+                    </button>
+                    <button type="button" onclick="executeSPARQL('reference')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All References
+                    </button>
+                    <button type="button" onclick="executeSPARQL('keyword')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All Keywords
+                    </button>
+                    <button type="button" onclick="executeSPARQL('conclusion')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All Conclusions
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
         <div id="push"></div>
     </div>
 </div>
 <div id="footer">
     <div class="container-fluid">
-        <div class="footer-text">WSO2 Cloud V: 1.2 . &copy; 2016
-            <div class="footer-text">www.slit.lk &copy; 2016 All Rights Reserved.</div>
+        <div class="footer-text">www.slit.lk &copy; 2016 All Rights Reserved.</div>
     </div>
 </div>
+<!-- Model for demote confirmation -->
+<div id="rdf-show-modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-margin-top-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close close-override" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">SPARQL Query Result</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="form">
+                            <div class="form-group">
+                                <label for="rdf-show-text" class="control-label" id="rdf-show-text-id"></label>
+                                <textarea class="form-control" id="rdf-show-text" style="min-height: 300px"
+                                          readonly></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -144,6 +220,19 @@
         }
     });
 
+</script>
+<script type="application/javascript">
+    function executeSPARQL(query) {
+        debugger;
+        $("#rdf-show-text-id").text(query);
+        $.get("sqarql?select=" + query,
+              function (data) {
+                  if (!$.isEmptyObject(data.results)) {
+                      $("#rdf-show-text").val(JSON.stringify(data.results));
+                      $('#rdf-show-modal').modal({show: true});
+                  }
+              });
+    }
 </script>
 </body>
 </html>

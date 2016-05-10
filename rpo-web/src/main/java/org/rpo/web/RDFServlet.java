@@ -30,6 +30,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * RDF Servlet
+ *
+ * @author Miyasi Lankage
+ * @since 1.0.0
+ */
 public class RDFServlet extends HttpServlet {
 
     @Override

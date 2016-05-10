@@ -16,6 +16,16 @@
         <url-pattern>/rdf</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SPARQLServlet</servlet-name>
+        <servlet-class>org.rpo.web.SPARQLServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SPARQLServlet</servlet-name>
+        <url-pattern>/sqarql</url-pattern>
+    </servlet-mapping>
+
     <!--<servlet>-->
         <!--<servlet-name>rps-show.jsp</servlet-name>-->
         <!--<jsp-file>/rps-show.jsp</jsp-file>-->
