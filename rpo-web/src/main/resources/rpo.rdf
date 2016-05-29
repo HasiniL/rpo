@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.slit.lk/2016/rpo#"
+     xml:base="http://www.slit.lk/2016/rpo"
+     xmlns:rpo="http://www.slit.lk/2016/rpo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.slit.lk/2016/rpo">
+        <owl:versionIRI rdf:resource="http://www.slit.lk/2016/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#authors -->
+
+    <owl:ObjectProperty rdf:about="http://www.slit.lk/2016/rpo#authors">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <rdfs:range rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#IssueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#IssueDate">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#abstract">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#conclusion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#conclusion">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#firstName">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#introduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#introduction">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#keyword">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#lastName">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#methodology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#methodology">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#reference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#reference">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#title">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#Author -->
+
+    <owl:Class rdf:about="http://www.slit.lk/2016/rpo#Author"/>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#ResearchPaper -->
+
+    <owl:Class rdf:about="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#Research-001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.slit.lk/2016/rpo#Research-001">
+        <rdf:type rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <IssueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indian Journal of Science and Technology, Vol 7(S7), 185–187, November 2014</IssueDate>
+        <abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data mining is the extraction of projecting information from large data sets, is a great innovative technology which helps corporations focus on the most important information in their data stockrooms. Data mining makes use of various statistical, machine learning and graphical methods and separate the knowledge in to a form which is very much useful for many real world applications. Social network analysis has become a very popular field of research as it is useful for many applications. In this paper we have overviewed various data mining techniques used for social network analysis.</abstract>
+        <conclusion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The rise of social networks gives very strong effects to the set of techniques developed for mining graphs and social networks. Social networks are rooted in many sources of data and at many different scales. Data Mining provides proficient way to execute and make use of database. In this paper we have briefly reviewed the various data mining techniques which are used for social network analysis and its applications.</conclusion>
+        <introduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data mining is a powerful tool that can help to find patterns and relationships within our data. Data mining discovers hidden information from large databases5. Social network analysis has drawn much attention in graph data management research field. To ensure meaningful data mining results, we must understand our data. There are several factors which has made the study of social networks gain enormous importance by researchers. Few such factors include the availability of huge amount of social network data, the representation of social network data as graphs, and so on2.</introduction>
+        <keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Mining, Graph Mining, Social NetworksData Mining, Graph Mining, Social Networks</keyword>
+        <methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data mining is an interactive process within which progress is defined by discovery through either automatic or manual methods. Businesses can learn from their transaction data more about the behavior of their customers and therefore can improve their business by exploiting this knowledge science can obtain from observational data (e.g. satellite data) new insights on research questions. Web usage information can be analyzed and exploited to optimize information access. Thus data mining generates novel, unsuspected interpretations of data. The main idea of data mining falls under two categories2:
+
+Predictive data mining creates the model of the system from the given data.
+Descriptive data mining generates significant data sets from the existing data.
+The aim of these above ideas is achieved by the following data mining techniques5.
+1. Characterization
+Characterization is used to generalize, summarize and possibly different data characteristics.
+2. Classification
+Data classification is a process in which the given data is classified in to different classes according to a classification model.
+3. Regression
+This process is similar to classification the major difference is that the object to be predicted is continuous rather than discrete.
+4. Association
+In this process the association between the objects is found. It discovers the association between various data bases and the association between the attributes of single database.
+5. Clustering
+Clustering involves grouping of data into several new classes such that it describes the data. It breaks large data set into smaller groups to make the designing and implementation process to be simple. The task of clustering is to maximize the similarity between the objects of classes and to reduce the similarity between the classes.
+6. Change Detection
+This method identifies the significant changes in the data from the previously measured values.
+7. Deviation Detection
+Deviation detection focuses on the major deviations between the actual values of the objects and its expected values. This method finds out the deviation according to the time as well the deviation among different subsets of data.
+8. Link Analysis
+It traces the connections between the objects to develop models based on the patterns in the relationships by applying graph theory techniques.
+9. Sequential Pattern Mining
+This method involves the discovery of the frequently occurring patterns in the data
+.
+Social Networks Analysis and Data Mining
+
+clustering is to maximize the similarity between the objects of classes and to reduce the similarity between the classes.
+6. Change Detection
+This method identifies the significant changes in the data from the previously measured values.
+7. Deviation Detection
+Deviation detection focuses on the major deviations between the actual values of the objects and its expected values. This method finds out the deviation according to the time as well the deviation among different subsets of data.
+8. Link Analysis
+It traces the connections between the objects to develop models based on the patterns in the relationships by applying graph theory techniques.
+9. Sequential Pattern Mining
+This method involves the discovery of the frequently occurring patterns in the data
+
+.</methodology>
+        <reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1. Zafarani R, Abbasi MA, Liu H. Social Media Mining an Introduction. Cambridge University; 2014.
+2. Du H. Data Mining Techniques and Applications an Introduction, 1st Edition. Cengage Learning Edition; 2010.
+3. Xu G, Zhang Y, Li L. Web Mining and Social Networking Techniques and applications, 1st edition. Springer; 2011.
+4. Mika P. Social Networks and the Semantic Web, 1st edition. Springer; 2007.
+5. Han J, Kamber M. Data Mining: Concept and Techniques, 2nd Edition. Morgan Kauffmann; 2006.
+6. Scott J. Social Network Analysis - A Handbook, Second Edition. SAGE Publication; 2000.
+7. Wasserman S, Faust K. Social Network Analysis - Methods &amp; Applications, Cambridge University press; 1998.</reference>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Study of Data Mining and Social Network Analysis</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#Researcher_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.slit.lk/2016/rpo#Researcher_001">
+        <rdf:type rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M.</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vedanayaki</lastName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

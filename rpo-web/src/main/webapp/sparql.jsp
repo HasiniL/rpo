@@ -138,13 +138,6 @@
                             </span>
                         Get All Introductions
                     </button>
-                    <button type="button" onclick="executeSPARQL('reference')" class="cu-btn cu-btn-sm cu-btn-blue">
-                            <span class="fw-stack fw-lg btn-action-ico">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
-                            </span>
-                        Get All References
-                    </button>
                     <button type="button" onclick="executeSPARQL('keyword')" class="cu-btn cu-btn-sm cu-btn-blue">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
