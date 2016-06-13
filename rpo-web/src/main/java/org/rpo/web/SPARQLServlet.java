@@ -24,24 +24,26 @@ public class SPARQLServlet extends HttpServlet {
                                                                                           IOException {
 
         String selectParam = request.getParameter("select");
-        String returnString = "{}";
+        String returnString = "Empty Response.";
 
         if (selectParam != null && !selectParam.trim().isEmpty()) {
             List<String> results = SPARQLExecutor.executeSelect(InMemoryModelStore.getInstance().getModels(),
                                                                 Util.getQueryString(selectParam));
 
             if (!results.isEmpty()) {
-                response.setContentType("application/json");
-                returnString = "{\"results\":[";
+                response.setContentType("text/plain");
+                returnString =
+                        "---------------------------------------------------------------------------------------------------------------------------------------\n"
+                        + "                                                                 RESULTS\n"
+                        +
+                        "---------------------------------------------------------------------------------------------------------------------------------------\n";
                 for (String result : results) {
-                    returnString += "\"" + result + "\", ";
+                    returnString +=  result + "\n --------------------------------------------------------------------------------------------------------------------------------------- \n";
                 }
-                returnString = returnString.substring(0, returnString.lastIndexOf(","));
-                returnString += "]}";
             }
         }
 
-        response.getWriter().println(returnString);
+        response.getWriter().write(returnString);
     }
 
 }

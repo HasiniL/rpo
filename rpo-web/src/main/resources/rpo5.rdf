@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.slit.lk/2016/rpo#"
+     xml:base="http://www.slit.lk/2016/rpo"
+     xmlns:rpo="http://www.slit.lk/2016/rpo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.slit.lk/2016/rpo">
+        <owl:versionIRI rdf:resource="http://www.slit.lk/2016/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#authors -->
+
+    <owl:ObjectProperty rdf:about="http://www.slit.lk/2016/rpo#authors">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <rdfs:range rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#abstract">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#conclusion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#conclusion">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#firstName">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#introduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#introduction">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#keyword -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#keyword">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#lastName">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#methodology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#methodology">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#reference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#reference">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.slit.lk/2016/rpo#title">
+        <rdfs:domain rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#Author -->
+
+    <owl:Class rdf:about="http://www.slit.lk/2016/rpo#Author"/>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#ResearchPaper -->
+
+    <owl:Class rdf:about="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#Research-001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.slit.lk/2016/rpo#Research-001">
+        <rdf:type rdf:resource="http://www.slit.lk/2016/rpo#ResearchPaper"/>
+        <abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data mining is extracts the knowledge/ information from a large amount of data which stores in
+multiple heterogeneous data base. Knowledge /information are conveying the message through direct or
+indirect. This paper provides a survey of various data mining techniques. These techniques include association,
+correlation, clustering and neural network. This research paper also conducts a formal review of the application
+of data mining such as the education sector, marketing, fraud detection, manufacturing and telecommunication.
+This paper discusses the topic based on past research paper and also studies the data mining techniques.</abstract>
+        <conclusion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This paper provides a general idea of data mining, data techniques and data mining in various fields. The main objectives of data mining techniques are to discover the knowledge from active data. These applications use classification, Prediction, clustering, Association techniques and so on. Hopefully in future work we review various classifications and clustering algorithm and its significance’s</conclusion>
+        <introduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the real world, huge amount of data are available in education, medical, industry and many other
+areas. Such data may provide knowledge and information for decision making. For example, you can find out
+drop out student in any university, sales data in shopping database. Data can be analyzed , summarized,
+understand and meet to challenges Data mining is a powerful concept for data analysis and process of
+discovery interesting pattern from the huge amount of data, data stored in various databases such as data
+warehouse , world wide web , external sources .Interesting pattern that is easy to understand, unknown, valid
+,potential useful. Data mining is a type of sorting technique which is actually used to extract hidden patterns
+from large databases. The goals of data mining are fast retrieval of data or information, knowledge Discovery
+from the databases, to identify hidden patterns and those patterns which are previously not explored , to reduce
+the level of complexity, time saving,Data mining refers extracting knowledge and mining from large
+amount of data. Sometimes data mining treated as knowledge discovery in database KDD is an
+iterative process
+
+Various algorithms and techniques like Classification, Clustering, Regression, Artificial Intelligence,
+Neural Networks, Association Rules, Decision Trees, Genetic Algorithm, Nearest Neighbor method etc., are
+meant for knowledge discovery from databases
+The main objective of this paper learns about the data
+mining. And the rest of this Section 2 discusses data mining models and techniques. Section 3 explores the
+application of data mining. Finally, we conclude the paper in Section</introduction>
+        <keyword rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Association, Clustering, Data mining, data mining application, knowledge discovery database</keyword>
+        <methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Mining Techniques
+Data mining means collecting relevant information from unstructured data. So it is able to help achieve specific objectives. The purpose of a data mining effort is normally either to create a descriptive model or a predictive model .A descriptive model presents, in concise form, the main characteristics of the data set. The purpose of a predictive model is to allow the data miner to predict an unknown (often future) value of a specific variable; the target variable
+
+1.1 Classification: Classification based on categorical (i.e. discrete, unordered) . This technique based on the supervised learning (i.e. desired output for a given input is known) .It can be classifying the data based on the training set and values (class label). These goals are achieve using a decision tree, neural network and classification rule (IF- Then).for example we can apply the classification rule on the past record of the student who left for university and evaluate them. Using these techniques we can easily identify the performance of the student.
+1.2 Regression: Regression is used to map a data item to a real valued prediction variable [8]. In other words, regression can be adapted for prediction. In the regression techniques target value are known. For example, you can predict the child behavior based on family history. 1.3 Time Series Analysis: Time series analysis is the process of using statistical techniques to model and explain a time-dependent series of data points. Time series forecasting is a method of using a model to generate predictions (forecasts) for future events based on known past events [9]. For example stock market.
+1.4 Prediction: It is one of a data mining techniques that discover the relationship between independent variables and the relationship between dependent and independent variables [4].Prediction model based on continuous or ordered value.
+1.5 Clustering: Clustering is a collection of similar data object. Dissimilar object is another cluster. It is way finding similarities between data according to their characteristic. This technique based on the unsupervised learning (i.e. desired output for a given input is not known). For example, image processing, pattern recognition, city planning
+Summarization: Summarization is abstraction of data. It is set of relevant task and gives an overview of data. For example, long distance race can be summarized total minutes, seconds and height.
+Association Rule: Association is the most popular data mining techniques and fined most frequent item set. Association strives to discover patterns in data which are based upon relationships between items in the same transaction. Because of its nature, association is sometimes referred to as “relation technique”. This method of data mining is utilized within the market based analysis in order to identify a set, or sets of products that consumers often purchase at the same time</methodology>
+        <reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[1] Yongjian Fu “ data mining: task, techniques and application”
+[2] Er. Rimmy Chuchra “Use of Data Mining Techniques for the Evaluation of Student Performance:A Case Study” International Journal of Computer Science and Management Research Vol 1 Issue 3 October 2012
+[3] J. Han and M. Kamber. “Data Mining, Concepts and Techniques”, Morgan Kaufmann, 2000.
+[4] Aakanksha Bhatnagar, Shweta P. Jadye, Madan Mohan Nagar” Data Mining Techniques &amp; Distinct Applications: A Literature Review” International Journal of Engineering Research &amp; Technology (IJERT) Vol. 1 Issue 9, November- 2012
+[5] Brijesh Kumar Baradwaj, Saurabh Pal “Mining Educational Data to Analyze Students Performance” (IJACSA) International Journal of Advanced Computer Science and Applications, Vol. 2, No. 6, 2011
+[6] Data mining white paper, www.ikanow.com
+[7] Nikita Jain, Vishal Srivastava “DATA MINING TECHNIQUES: A SURVEY PAPER” IJRET: International Journal of Research in Engineering and Technology, Volume: 02 Issue: 11 | Nov-2013,
+[8] Dr. M.H.Dunham, “Data Mining, Introductory and Advanced Topics”, Prentice Hall, 2002.
+[9] Time Series Analysis and Forecasting with Weka , http://wiki.pentaho.com/display/DATAMINING/
+[10] Umamaheswari. K, S. Niraimathi “A Study on Student Data Analysis Using Data Mining Techniques” International Journal of Advanced Research in Computer Science and Software Engineering, Volume 3, Issue 8, August 2013</reference>
+        <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use of Data Mining in Various Field: A Survey Paper</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#Researcher-001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.slit.lk/2016/rpo#Researcher-001">
+        <rdf:type rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smita</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.slit.lk/2016/rpo#Researcher-002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.slit.lk/2016/rpo#Researcher-002">
+        <rdf:type rdf:resource="http://www.slit.lk/2016/rpo#Author"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Priti</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharma</lastName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

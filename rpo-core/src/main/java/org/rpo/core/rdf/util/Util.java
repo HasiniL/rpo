@@ -23,6 +23,10 @@ public class Util {
             return QueryStringStore.GET_ALL_KEYWORDS;
         } else if("reference".equals(queryName)) {
             return QueryStringStore.GET_ALL_REFERENCES;
+        }  else if("title".equals(queryName)) {
+            return QueryStringStore.GET_ALL_TITLES;
+        }  else if("methodology".equals(queryName)) {
+            return QueryStringStore.GET_ALL_METHODOLOGIES;
         }
         throw new RuntimeException("Unsupported query.");
     }

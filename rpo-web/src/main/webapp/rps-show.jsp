@@ -160,7 +160,8 @@
     <div class="modal-dialog modal-dialog-margin-top-md">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close close-override" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close close-override" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">RDF Content</h4>
             </div>
             <div class="modal-body">
@@ -208,46 +209,69 @@
 <script type="application/javascript">
     $(document).ready(function () {
         $.get("rdf?getAll=true",
-              function (data) {
-                  if (!$.isEmptyObject(data)) {
-                      var content = "";
-                      $(data.files).each(function () {
-                          content += '<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">' +
-                                     '<div class="cloud-app-listing app-color-six">' +
-                                     '<a href="#">' +
-                                     '<div class="app-icon" style="background: #0498D5 !important;">' +
-                                     '<img src="images/rpo/rdf.png" class="square-element">' +
-                                     '</div>' +
-                                     '<div class="app-name">' +
-                                     this +
-                                     '</div>' +
-                                     '</a>' +
-                                     '<a class="dropdown-toggle app-extra" data-toggle="dropdown">' +
-                                     '<i class="fa fa-ellipsis-v"></i>' +
-                                     '<span class="sr-only">Toggle Dropdown</span>' +
-                                     '</a>' +
-                                     '<ul class="dropdown-menu app-extra-menu" role="menu">' +
-                                     '<li><a href="#" onclick="loadRDF(\'' + this + '\') ">View RDF</a></li>' +
-                                     '<li><a href="#">Delete</a></li>' +
-                                     '</ul>' +
-                                     '</div>' +
-                                     '</div>';
-                      });
-                      $("#research-paper-container").html(content);
-                  }
-              });
+                function (data) {
+                    if (!$.isEmptyObject(data)) {
+                        var content = "";
+                        $(data.files).each(function () {
+                            content += '<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">' +
+                                    '<div class="cloud-app-listing app-color-six">' +
+                                    '<a href="#">' +
+                                    '<div class="app-icon" style="background: #0498D5 !important;">' +
+                                    '<img src="images/rpo/rdf.png" class="square-element">' +
+                                    '</div>' +
+                                    '<div class="app-name">' +
+                                    this +
+                                    '</div>' +
+                                    '</a>' +
+                                    '<a class="dropdown-toggle app-extra" data-toggle="dropdown">' +
+                                    '<i class="fa fa-ellipsis-v"></i>' +
+                                    '<span class="sr-only">Toggle Dropdown</span>' +
+                                    '</a>' +
+                                    '<ul class="dropdown-menu app-extra-menu" role="menu">' +
+                                    '<li><a href="#" onclick="loadRDF(\'' + this + '\') ">View RDF</a></li>' +
+                                    '<li><a href="#" onclick="runSPARQL(\'title\',\'' + this +
+                                    '\') ">Title</a></li>' +
+                                    '<li><a href="#" onclick="runSPARQL(\'author\',\'' + this + '\') ">Authors</a></li>' +
+                                    '<li><a href="#" onclick="runSPARQL(\'abstract\',\'' + this +
+                                    '\') ">Abstract</a></li>' +
+                                    '<li><a href="#" onclick="runSPARQL(\'introduction\',\'' + this +
+                                    '\') ">Introduction</a></li>' +
+                                    '<li><a href="#" onclick="runSPARQL(\'methodology\',\'' + this +
+                                    '\') ">Methodology</a></li>' +
+                                    '<li><a href="#" onclick="runSPARQL(\'keyword\',\'' + this +
+                                    '\') ">Keywords</a></li>' +
+                                    '<li><a href="#" onclick="runSPARQL(\'conclusion\',\'' + this +
+                                    '\') ">Conclusion</a></li>' +
+                                    '</ul>' +
+                                    '</div>' +
+                                    '</div>';
+                        });
+                        $("#research-paper-container").html(content);
+                    }
+                });
     });
 </script>
 <script type="application/javascript">
     function loadRDF(fileName) {
         $("#rdf-show-text-id").text(fileName);
         $.get("rdf?fileName=" + fileName,
-              function (data) {
-                  if (!$.isEmptyObject(data)) {
-                      $("#rdf-show-text").val(data);
-                      $('#rdf-show-modal').modal({show: true});
-                  }
-              });
+                function (data) {
+                    if (!$.isEmptyObject(data)) {
+                        $("#rdf-show-text").val(data);
+                        $('#rdf-show-modal').modal({show: true});
+                    }
+                });
+    }
+
+    function runSPARQL(attribute, fileName) {
+        $("#rdf-show-text-id").text(fileName);
+        $.get("rdf?fileName=" + fileName + "&attribute=" + attribute,
+                function (data) {
+                    if (!$.isEmptyObject(data)) {
+                        $("#rdf-show-text").val(data);
+                        $('#rdf-show-modal').modal({show: true});
+                    }
+                });
     }
 </script>
 </body>

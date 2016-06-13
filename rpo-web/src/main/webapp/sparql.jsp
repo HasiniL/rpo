@@ -117,6 +117,13 @@
             <div class="row row-centered app-listing" id="research-paper-container">
                 <!-- BOF listing block -->
                 <div class="form-group">
+                    <button type="button" onclick="executeSPARQL('title')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All Titles
+                    </button>
                     <button type="button" onclick="executeSPARQL('author')" class="cu-btn cu-btn-sm cu-btn-blue">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
@@ -137,6 +144,13 @@
                                 <i class="fw fw-add fw-stack-1x"></i>
                             </span>
                         Get All Introductions
+                    </button>
+                    <button type="button" onclick="executeSPARQL('methodology')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All Methodologies
                     </button>
                     <button type="button" onclick="executeSPARQL('keyword')" class="cu-btn cu-btn-sm cu-btn-blue">
                             <span class="fw-stack fw-lg btn-action-ico">
@@ -220,8 +234,8 @@
         $("#rdf-show-text-id").text(query);
         $.get("sqarql?select=" + query,
               function (data) {
-                  if (!$.isEmptyObject(data.results)) {
-                      $("#rdf-show-text").val(JSON.stringify(data.results));
+                  if (!$.isEmptyObject(data)) {
+                      $("#rdf-show-text").val(data);
                       $('#rdf-show-modal').modal({show: true});
                   }
               });
