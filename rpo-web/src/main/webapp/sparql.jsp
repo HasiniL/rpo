@@ -166,6 +166,13 @@
                             </span>
                         Get All Conclusions
                     </button>
+                    <button type="button" onclick="executeSPARQL('literatureReview')" class="cu-btn cu-btn-sm cu-btn-blue">
+                            <span class="fw-stack fw-lg btn-action-ico">
+                                <i class="fw fw-ring fw-stack-2x"></i>
+                                <i class="fw fw-add fw-stack-1x"></i>
+                            </span>
+                        Get All Literature Reviews
+                    </button>
                 </div>
             </div>
         </div>

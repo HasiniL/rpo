@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.sliit.lk/2016/rpo"
+     xml:base="http://www.sliit.lk/2016/rpo"
+     xmlns:rpo="http://www.sliit.lk/2016/rpo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.sliit.lk/2016/rpo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Abstract"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Conclusion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Conclusion"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Introduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Introduction"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#IssueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#IssueDate"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Keywords"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#LitretureReview -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#LitretureReview"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Methodology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Methodology"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Name"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#References -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#References"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Author -->
+
+    <owl:Class rdf:about="http://www.sliit.lk/2016/rpo#Author"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#ResearchPaper -->
+
+    <owl:Class rdf:about="http://www.sliit.lk/2016/rpo#ResearchPaper"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Paper01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Paper01">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#ResearchPaper"/>
+        <rpo:Abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">he detection of common and distinctive topics within a document set, togetherwith the generation of multi-document summaries, can greatly ease the burdenof information management.
+
+In the paper, a technique is proposed called Mining Unstructured Data FromWeb Using Soft Computing that creates the clusters of web documents usingfuzzy clustering which focuses on this problem of mining the useful informationfrom the collected web documents.</rpo:Abstract>
+        <rpo:Introduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For a given user&apos;s query the search engine searches in the local database andvery quickly displays the results.
+
+The problem of clustering in finite set of data is to find several cluster cantersthat can properly characterize relevant classes of finite set of data such thatdegree of association is strong for data within blocks of the partition and weakfor data in different blocks.
+
+There are two basic methods of fuzzy clustering, one which is based on fuzzy c-partitions, is called a fuzzy c-means clustering method and the other, based onthe fuzzy equivalence relations, is called a fuzzy equivalence clustering method.</rpo:Introduction>
+        <rpo:IssueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IJCTA | JAN-FEB 2012</rpo:IssueDate>
+        <rpo:Keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Search Engine, Web documents, Fuzzy Clustering, Soft computing</rpo:Keywords>
+        <rpo:LitretureReview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document clustering is recently applied to dynamically discover contentrelationships in e-Learning material based on document metadata descriptions[4, 5]. Main focus is on the discovery and representation of unobvious orunfamiliar knowledge about a domain rather than on facilitating the access tospecific information resources through a set of document clusters.
+
+Various techniques for accurate clustering have been proposed , e.g. K-MEAN[7, 8], CURE , BIRCH , ROCK.K-MEAN clustering algorithm is used to partitionobjects into clusters while minimizing sum of distance between objects and theirnearest center.
+
+In statistics and machine learning, k-means clustering is a method of clusteranalysis which aims to partition n observations into k clusters in which eachobservation belongs to the cluster with the nearest mean.
+
+In fuzzy clustering, data elements can belong to more than one cluster, andassociated with each element is a set of membership levels.</rpo:LitretureReview>
+        <rpo:Methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">he growth of the World Wide Web has enticed many researchers to attempt todevise various methodologies for organizing such a huge information source.
+
+Documents on the web have a very large variety of topics, they are differentlystructured, and most of them are not well-structured.
+
+The intention is to create a system that is able to categorize web documentseffectively, based on a more informative representation of the document data,and targeted towards achieving high degree of clustering quality byimplementing fuzzy clustering algorithm.
+
+
+The intention is to create a system that is able to categorize web documentseffectively, based on a more informative representation of the document data,and targeted towards achieving high degree of clustering quality byimplementing fuzzy clustering algorithm.
+
+While search engines are well recognized by the Information Retrievalcommunity, they do not solve the problem of automatically organizing thedocuments they retrieve.</rpo:Methodology>
+        <rpo:References rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[1] M.E.S. Mendes Rodrigues and L. Sacks, “A Scalable Hierarchical Fuzzy Clustering Algorithm for Text Mining”, Department of Electronic and Electrical Engineering University College London Torrington Place, London, WC1E 7JE, United Kingdom, 2004. 
+[2] D.R. Cutting, D.R. Karger, J.O. Pederson and J.W. Tukey (1992). Scatter/gather: a cluster-based approach to browsing large document collections. In: Proceedings of the 15th Annual 
+International ACM SIGIR Conference on Research and Development in Information Retrieval, SIGIR’92, pp. 318-329, Copenhagen, Denmark, June 1992. 
+[3] A. Schenker, M. Last and A. Kandel (2001).A term-based algorithm for hierarchical clustering of Web documents. In: Proceedings of the Joint 9th IFSA World Congress and 20th NAFIPS International Conference, vol.5, pp. 3076-3081, Vancouver, Canada, July 2001. 
+[4] M.E.S. Mendes, W. Jarrett, O. Prnjat and L. Sacks (2003).Flexible searching and browsing for telecoms learning material. In: Proceedings of the 2003 International Symposium on Telecommunications, IST’2003, Isfahan, Iran, August 2003.</rpo:References>
+        <rpo:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mining Unstructured Data from Web Using Soft Computing</rpo:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Researcher -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Researcher">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#Author"/>
+        <rpo:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr. P.R.Deshmukh</rpo:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Researcher2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Researcher2">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#Author"/>
+        <rpo:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ms.Sonali A. Deshpande</rpo:Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

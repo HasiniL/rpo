@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.sliit.lk/2016/rpo"
+     xml:base="http://www.sliit.lk/2016/rpo"
+     xmlns:rpo="http://www.sliit.lk/2016/rpo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.sliit.lk/2016/rpo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Abstract"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Conclusion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Conclusion"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Introduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Introduction"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#IssueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#IssueDate"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Keywords"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#LitretureReview -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#LitretureReview"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Methodology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Methodology"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Name"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#References -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#References"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Author -->
+
+    <owl:Class rdf:about="http://www.sliit.lk/2016/rpo#Author"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#ResearchPaper -->
+
+    <owl:Class rdf:about="http://www.sliit.lk/2016/rpo#ResearchPaper"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Paper01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Paper01">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#ResearchPaper"/>
+        <rpo:Abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Existing work have mainly focused on moving object is completely based onclustering algorithms which only gives us that at any particular time how manyvehicles are present at any particular location, but it does not generate anyuseful patterns.
+
+In this project we deal with the analysis, pre processing and modeling of trafficdata in moving object database for traffic management system.</rpo:Abstract>
+        <rpo:Conclusion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For this firstly we are clustering our data set and after that we are going toperform classification on that, because by doing only clustering we can not getany useful patterns only we can get is at any particular time how many vehiclesare present at any location and their directions but by this it is not possible toget useful patterns only we can do is to compare the performance of variousclustering algorithms.</rpo:Conclusion>
+        <rpo:Introduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The comprehension of phenomena related to movement not only of people andvehicles but also of animals and other moving objects - has always been a keyissue in many areas of scientific investigation or social analysis.
+
+Many applications track the movement of mobile objects, using location-acquisition technologies such as Global Positioning System, Global System forMobile Communications etc.
+
+
+The distance functions and indexing methods proposed for one-dimensionaltime series data a not be directly applied to moving object trajectories due totheir unique characteristics.
+
+Trajectories are usually two or three dimensional data sequences and atrajectory data set often contain trajectories with different lengths.
+
+Most of the earlier proposals on similarity-based time series data retrieval arefocused on one-dimensional time series data.
+
+Unlike stock, weather, or commodity price data, trajectories of moving objectsare captured by recording the positions of the objects from time to time.</rpo:Introduction>
+        <rpo:IssueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IJCSET |April 2012| Vol 2, Issue 4,1040-1042</rpo:IssueDate>
+        <rpo:Keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory, Spatio temporal clustering, C 4.5
+Algorithm, Incremental DBSCAN, Moving Object</rpo:Keywords>
+        <rpo:Methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BSCAN is based on two main concepts: density reachability and densityconnectability.
+
+These both concepts depend on two input parameters of the dbscan clustering:the size of epsilon neighborhood e and the minimum points in a cluster m.DBSCAN requires only one input parameter and supports the user indetermining an appropriate value for it.
+
+The key idea of density-based clustering is that for each object of a cluster theneighborhood of a given radius has to contain at least a minimum number ofobjects, i.e. the cardinality of the neighborhood has to exceed some threshold.
+
+DBSCAN requires two parameters: and the minimum number of points requiredto form a cluster.
+
+When we think of moving object or trajectory data that represent trafficsituated in some city or province, obvious task we would like to performconcerning everyday phenomena include detecting traffic jams, predicting trafficjams and discovering relations between traffic jams.
+
+
+Various extensions have been made to the method to improve the efficiency,effectiveness, and generality to the domain of the trees produced.</rpo:Methodology>
+        <rpo:References rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[1] Ajaya Kumar Akasapu, Lokesh Kumar Sharma, G. Ramakrishna in
+Volume 9– No.5, November 2010, “Efficient Trajectory Pattern
+Mining for both Sparse and Dense Dataset”, International Journal of
+Computer Applications (0975 – 8887).
+[2] R. Agrawal, C. Faloutsos, and A. N. Swami. Efficient similarity search
+in sequence databases. In Proc. Conf. of Foundations of Data
+Organization and Algorithms, 1993.
+[3] Carlos Ordonez, “Clustering Binary Data Streams with DBSCAN”,
+San Diego, CA, USA. Copyright 2003, ACM 1- 58113-763-x,
+DMKD&apos;03, June 13, 2003
+4] Martin Ester, Hans-Peter Kriegel, Jiirg Sander, Xiaowei Xu, in 1996,
+“A Density-Based Algorithm for Discovering Clusters in Large
+Spatial Databases with Noise”.</rpo:References>
+        <rpo:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Mining on Moving Object Trajectories</rpo:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Researcher -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Researcher">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#Author"/>
+        <rpo:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sonal Athavale1</rpo:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Researcher2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Researcher2">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#Author"/>
+        <rpo:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neelabh Sao2</rpo:Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

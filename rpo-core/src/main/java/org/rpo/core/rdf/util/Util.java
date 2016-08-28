@@ -27,6 +27,8 @@ public class Util {
             return QueryStringStore.GET_ALL_TITLES;
         }  else if("methodology".equals(queryName)) {
             return QueryStringStore.GET_ALL_METHODOLOGIES;
+        }  else if("literatureReview".equals(queryName)) {
+            return QueryStringStore.GET_ALL_LITERATURE_REVIEW;
         }
         throw new RuntimeException("Unsupported query.");
     }

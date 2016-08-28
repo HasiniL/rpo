@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.sliit.lk/2016/rpo"
+     xml:base="http://www.sliit.lk/2016/rpo"
+     xmlns:rpo="http://www.sliit.lk/2016/rpo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.sliit.lk/2016/rpo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Abstract"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Conclusion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Conclusion"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Introduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Introduction"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#IssueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#IssueDate"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Keywords"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#LitretureReview -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#LitretureReview"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Methodology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Methodology"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Name"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#References -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#References"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Author -->
+
+    <owl:Class rdf:about="http://www.sliit.lk/2016/rpo#Author"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#ResearchPaper -->
+
+    <owl:Class rdf:about="http://www.sliit.lk/2016/rpo#ResearchPaper"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Paper01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Paper01">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#ResearchPaper"/>
+        <rpo:Abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data mining is the extraction of projecting information from large data sets, is 
+Agreat innovative technology which helps corporations focus on the mostimportant information in their data stockrooms.
+
+Data mining makes use of various statistical, machine learning and graphicalmethods and separate the knowledge in to a form which is very much useful formany real world applications.</rpo:Abstract>
+        <rpo:Conclusion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The rise of social networks gives very strong effects to the set of techniquesdeveloped for mining graphs and social networks.
+
+In this paper we have briefly reviewed the various data mining techniqueswhich are used for social network analysis and its applications.</rpo:Conclusion>
+        <rpo:Introduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data mining is a powerful tool that can help to find patterns and relationshipswithin our data.
+
+To ensure meaningful data mining results, we must understand our data.
+
+Few such factors include the availability of huge amount of social network data,the representation of social network data as graphs, and so on</rpo:Introduction>
+        <rpo:IssueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indian Journal of Science and Technology, Vol 7(S7), 185–187, November 2014</rpo:IssueDate>
+        <rpo:Keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Mining, Graph Mining, Social Networks</rpo:Keywords>
+        <rpo:LitretureReview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Businesses can learn from their transaction data more about the behavior oftheir customers and therefore can improve their business by exploiting thisknowledge science can obtain from observational data new insights on researchquestions.
+
+Predictive data mining creates the model of the system from the given data.
+
+Descriptive data mining generates significant data sets from the existing data.
+
+1.Characterization
+Characterization is used to generalize, summarize and possibly different data characteristics. 
+
+2. Classification
+Data classification is a process in which the given data is classified in to different classes according to a classification model
+
+3.Regression
+This process is similar to classification the major difference is that the object to be predicted is continuous rather than discrete.
+
+4.Association
+In this process the association between the objects is found 
+
+5.Clustering
+Clustering involves grouping of data into several new classes such that it describes the data  The task of clustering is to maximize the similarity between the objects of classes and to reduce the similarity between the classes.
+
+6.Change Detection
+This method identifies the significant changes in the data from the previously measured values
+
+7.Deviation Detection
+Deviation detection focuses on the major deviations between the actual values of the objects and its expected values. 
+
+8.Link Analysis
+It traces the connections between the objects to develop models based on the patterns in the relationships by applying graph theory techniques.
+
+9.Sequential Pattern Mining
+This method involves the discovery of the frequently occurring patterns in the data.</rpo:LitretureReview>
+        <rpo:Methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vertexes represent the objects, edges represent the links, and both objects andlinks may have attributes.
+
+Network construction from general, real-world data presents severalunexpected challenges owing to the data domains themselves, e.g., informationextraction and preprocessing, and to the data structures used for knowledgerepresentation and storage.
+
+A social network can be generically understood to be some kind of computerapplication which facilitates the creation or definition of social relations amongpeople based on acquaintance, general interests, activities, professionalinterests, family and associative relations, and so on.
+
+Social networks can arise from information in sources such as text, databases,sensor networks, communication systems, and social media
+
+data mining of social networks can be done using the graph mining methodssuch as classification/topologies, prediction, efficiency, pattern detection,measurement and metrics, modelling, evolution and structure, data processing,and communities5.
+
+To extract the information represented in graphs we need to define metrics thatdescribe the global structure of graphs, find the community structure of thenetwork, and define metrics that describe the patterns of local interaction in thegraphs, develop efficient algorithms for mining data on networks, andunderstand the model of generation of graphs.
+
+Based on graph theoretical concepts a social networks interprets the socialrelationships of individuals as points and their relationships as the linesconnecting them</rpo:Methodology>
+        <rpo:References rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1. Zafarani R, Abbasi MA, Liu H. Social Media Mining an Introduction. Cambridge University; 2014.
+2. Du H. Data Mining Techniques and Applications an Introduction, 1st Edition. Cengage Learning Edition; 2010.
+3. Xu G, Zhang Y, Li L. Web Mining and Social Networking Techniques and applications, 1st edition. Springer; 2011.
+4. Mika P. Social Networks and the Semantic Web, 1st edition. Springer; 2007.</rpo:References>
+        <rpo:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Study of Data Mining and Social Network Analysis</rpo:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Researcher -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Researcher">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#Author"/>
+        <rpo:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M. Vedanayaki</rpo:Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

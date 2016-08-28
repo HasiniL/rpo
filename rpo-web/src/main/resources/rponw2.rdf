@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.sliit.lk/2016/rpo"
+     xml:base="http://www.sliit.lk/2016/rpo"
+     xmlns:rpo="http://www.sliit.lk/2016/rpo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.sliit.lk/2016/rpo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Abstract"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Conclusion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Conclusion"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Introduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Introduction"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#IssueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#IssueDate"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Keywords"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#LitretureReview -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#LitretureReview"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Methodology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Methodology"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Name"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#References -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#References"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk/2016/rpo#Title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Author -->
+
+    <owl:Class rdf:about="http://www.sliit.lk/2016/rpo#Author"/>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#ResearchPaper -->
+
+    <owl:Class rdf:about="http://www.sliit.lk/2016/rpo#ResearchPaper"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Paper01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Paper01">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#ResearchPaper"/>
+        <rpo:Abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data warehouses standardize the data across the organization so as to have asingle view of information.
+
+Developing a data warehouse for educational institute is the less focused areasince educational institutes are non-profit and service oriented organizations.
+
+The cost of building a data warehouse is expensive for any educationalinstitution as it requires data warehouse tools for building data warehouse andextracting data using data mining tools from data warehouse.
+
+The present study provides an option to build data warehouse and extractuseful information using data warehousing and data mining open source tools.
+
+In this paper we have explored the need of data warehouse / businessintelligence for an educational institute, the operational data of an educationalinstitution has been used for experimentation.</rpo:Abstract>
+        <rpo:Conclusion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Since most of the educational institutes are nonprofit organizations and serviceoriented, the evaluation of the usefulness of the data warehouse can be doneon the basis of its ability to meet user&apos;s requirements.
+
+The decision makers can extract information regarding three main componentsof the institute, namely Employees, Students and Infrastructure.
+
+Employee data mart can provide the users with the information such as careergrowth and attrition rate.
+
+Student mart can provide the information related to the student like bestoutgoing student considering his academic and non academic activities.</rpo:Conclusion>
+        <rpo:Introduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motivation for building data warehouse for the educational institute is from twosources, internal sources like inability of current operational systems to providerequired information for parameter driven analysis and external sources likecompetitive factors.
+
+3) The user interface for the current operational system is not satisfactory andis confusing and hard to use for decision makers.
+
+The purpose of this paper is to investigate current system of informationdelivery and propose a better system for timely, accurate, consistentinformation delivery to the decision makers of the educational institutes</rpo:Introduction>
+        <rpo:IssueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International Journal of Machine Learning and Computing, Vol. 2, No. 4, August 2012</rpo:IssueDate>
+        <rpo:Keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data warehouse, data mining, analysis, ETL,</rpo:Keywords>
+        <rpo:LitretureReview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the grocery store, management is concerned with logistics of ordering,stocking, and selling products while maximizing profit.
+
+Both store management and marketing spend a great deal of time tinkeringwith pricing and promotions
+
+
+For promoting proper products and services, the company needs to analyzethese detailed transactions.
+
+There are some efforts in the area of data warehouse for building datawarehouse for education domain.
+
+Existing facilities and databases affect the chosen data warehouse that bringsthem together to support decisional activities leading the whole universityenvironment, including administrators, faculties and students.
+
+Next they addressed the current environment drivers that provide theopportunities for taking advantage of a data warehouse and some of theobstacles inhibiting the development of an academic data warehouse.</rpo:LitretureReview>
+        <rpo:Methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utilizing a decision support system is a proactive way to use data to manage,operate, and evaluate educational institute in a better way.
+
+Depending on the quality and availability of the underlying data, such a systemcould address a wide range of problems by distilling data from any combinationof education records maintenance system.
+
+The data mining from data warehouse can be a ready and effective system forthe decision makers.
+
+The data from reputed engineering college namely R V College of Engineering,Bangalore, Karnataka, India, has been considered for this study.
+
+1 shows the data warehouse architecture of RV College where source systemsare smart campus, asset management server and csv files, the information isspread across diverse platforms, data from different sources is collected andthen consolidated to produce required report.
+
+ETL activities are performed to extract the data from heterogeneous sourcesand load into staging and then load the data into dimension and fact tables asper the schedules.
+
+The purpose of this paper was to investigate current system of informationdelivery and proposing a better system for timely, accurate, consistentinformation delivery to the decision makers of the educational institute.</rpo:Methodology>
+        <rpo:References rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REFERENCES
+[1] Ralph Kimball, the Data Warehouse ETL Toolkit, Wiley India Pvt Ltd.,
+2006.
+[2] KV. K. K. Prasad, Data warehouse development Tools, Dreamtech
+Press, 2006.
+[3] W. H. Inmon, Building the Data Warehouse. Wiley; 3rd edition March
+15, 2002.
+[4] Alex Berson, Data Warehousing Data Mining &amp; OLAP, Computing
+Mcgraw-Hill, November 5, 1997.
+[5] Arshad Khan, SAP and BW Data Warehousing, Khan Consulting and
+Publishing, LLC (January 1, 2005)</rpo:References>
+        <rpo:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realistic Analysis of Data Warehousing and Data Mining
+Application in Education Domain</rpo:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk/2016/rpo#Researcher -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk/2016/rpo#Researcher">
+        <rdf:type rdf:resource="http://www.sliit.lk/2016/rpo#Author"/>
+        <rpo:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Realistic Analysis of Data Warehousing and Data Mining
+Application in Education Domain</rpo:Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

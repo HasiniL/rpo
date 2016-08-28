@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.sliit.lk"
+     xml:base="http://www.sliit.lk"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:www="http://www.sliit.lk#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.sliit.lk"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk#Abstract -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#Abstract"/>
+    
+
+
+    <!-- http://www.sliit.lk#Conclusion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#Conclusion"/>
+    
+
+
+    <!-- http://www.sliit.lk#Introduction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#Introduction"/>
+    
+
+
+    <!-- http://www.sliit.lk#IssueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#IssueDate"/>
+    
+
+
+    <!-- http://www.sliit.lk#Keywords -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#Keywords"/>
+    
+
+
+    <!-- http://www.sliit.lk#LitretureReview -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#LitretureReview"/>
+    
+
+
+    <!-- http://www.sliit.lk#Methodology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#Methodology"/>
+    
+
+
+    <!-- http://www.sliit.lk#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#Name"/>
+    
+
+
+    <!-- http://www.sliit.lk#References -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#References"/>
+    
+
+
+    <!-- http://www.sliit.lk#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sliit.lk#Title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk#Author -->
+
+    <owl:Class rdf:about="http://www.sliit.lk#Author"/>
+    
+
+
+    <!-- http://www.sliit.lk#ResearchPaper -->
+
+    <owl:Class rdf:about="http://www.sliit.lk#ResearchPaper"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sliit.lk#Paper01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk#Paper01">
+        <rdf:type rdf:resource="http://www.sliit.lk#ResearchPaper"/>
+        <www:Abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abstract--Data Mining and Data Warehousing are two most significanttechniques for pattern detection and concentrated data management in presenttechnology.
+
+ELearning is one of the most important applications of data mining.
+
+This paper provides importance to the combination of Web Services on the e-Learning application domain, because Web Service is the most complex choicefor distance education during these days</www:Abstract>
+        <www:Conclusion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Web usage mining technique is explained in this paper, which is a non-trivial procedure of taking out helpful and previously unknown blueprints fromthe use of Web.
+
+Since e-Learning process is a endlessly changeable process, the safety services,the encryption of messages, and the general facts to explain services andservices access points in e-Learning systems environments are in call forthought</www:Conclusion>
+        <www:Introduction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any association does not deal with a single database, but deals with variouskind of database means multiple databases but there is the need for fastprocessing, and integrating of these databases which can be possible by datawarehouse.
+
+Centralizing data management and revival is often distinct as data warehousing.
+
+When databases are set up for queries on daily transactions, they are called&quot;Operational data stores&quot; rather than data warehouse.
+
+The mechanisms of data warehouse are: retrieval, extract, analysis, transform,load data and managing data dictionary.
+
+
+
+Data mining, data warehousing, and Online Analytical Processing together formthe functionality of decision making or Decision Support System.</www:Introduction>
+        <www:IssueDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vol. 4, No.1, 2013</www:IssueDate>
+        <www:Keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data Mining; Data Warehousing; e-Learning; Moodle; LMS; LCMS.</www:Keywords>
+        <www:LitretureReview rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This structural design of e-Learning gives a practical model of the componentsof e-Learning for the consistency of e-Learning development.
+
+The Advanced Distributed Learning&apos;s Sharable Content Object Reference Modelpractical model explains the swap of data within a Learning ContentManagement System or a Learning Management System to track user&apos;sprogress.
+
+The functionality is not explained by SCORM. A multi-user atmosphere in whichthe knowledge developer can create, reuse, manage, store, and distributedigital learning content from a central storehouse is known as LCMS. Here theprocesses adjoining the learning are managed by LMS. LCMS permits the usersto generate and to use again small units of digital instructional learningmaterial.
+
+The incorporated use of metadata arrangements and learning object import andexport formats also allows learning objects to be created and shared by multipletools and repositories.</www:LitretureReview>
+        <www:Methodology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The most significant content wrapping system these days is, ADL&apos;s SCORM. Thefacts of the contents are stored in various databases which can be developedand received by data mining and data warehousing techniques; 3) User Profile:User Profile consist personal data, learning history, prerequisites, learningplans, degrees and certifications, evaluation of information and contributionstatus in existing learning; 4) Student Registration: Student Registrationidentifies the availability of courses for the learner information about othermembers of the course.
+
+
+A Web Services Description Language file holding the explanation of themessage and information regarding end point is published by the provider topermit requester to create the SOAP message and transmit it to the exactdestination.
+
+For, instance, Two data mining and data ware housing tools are WebSIFT andWebLogMiner for pattern detection from web logs but these tools are notinitiated in e-Learning environment till now because if the educator does nothave sufficient knowledge in data mining, can&apos;t use these tools to get betterefficiency of e- Learning.</www:Methodology>
+        <www:References rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REFERENCES 
+[1] Xiaofei Liu, Abdulmotaleb El Saddik and Nicolas D.Georganas”AN IMPLEMENTABLE ARCHITECTURE OF AN E-LEARNING SYSTEMS”. CCECE 2003 – CCGEI 2003 Montreal May/mai 2003. 
+[2] FUNDAMENTALS OF DATABASE SYSTEMS, Fourth Edition, Elmasri and Navathe. 
+[3] Data Mining: What is Data Mining, Web site at http://www.anderson.ucla.edu/faculty/jason.frand/teacher/technologies/palace/datamining.htm.</www:References>
+        <www:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studying Data Mining and Data Warehousing with Different E-Learning System</www:Title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk#Researcher -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk#Researcher">
+        <rdf:type rdf:resource="http://www.sliit.lk#Author"/>
+        <www:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shakir Khan</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk#Researcher2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk#Researcher2">
+        <rdf:type rdf:resource="http://www.sliit.lk#Author"/>
+        <www:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ms.Sonali A. Deshpande</www:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sliit.lk#Researcher3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sliit.lk#Researcher3">
+        <rdf:type rdf:resource="http://www.sliit.lk#Author"/>
+        <www:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr. Arun Sharma</www:Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
