@@ -21,29 +21,42 @@ public class SPARQLServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
-                                                                                          IOException {
+            IOException {
 
         String selectParam = request.getParameter("select");
         String returnString = "Empty Response.";
 
         if (selectParam != null && !selectParam.trim().isEmpty()) {
             List<String> results = SPARQLExecutor.executeSelect(InMemoryModelStore.getInstance().getModels(),
-                                                                Util.getQueryString(selectParam));
+                    Util.getQueryString(selectParam));
 
-            if (!results.isEmpty()) {
-                response.setContentType("text/plain");
-                returnString =
-                        "---------------------------------------------------------------------------------------------------------------------------------------\n"
-                        + "                                                                 RESULTS\n"
-                        +
-                        "---------------------------------------------------------------------------------------------------------------------------------------\n";
-                for (String result : results) {
-                    returnString +=  result + "\n --------------------------------------------------------------------------------------------------------------------------------------- \n";
+            if ("title".equals(selectParam)) {
+                returnString = "{}";
+                if (!results.isEmpty()) {
+                    response.setContentType("text/plain");
+                    returnString = "{\"titles\":[";
+                    for (String result : results) {
+                        returnString += "\"" + result.replace("\n", " ") + "\", ";
+                    }
+                    returnString = returnString.substring(0, returnString.lastIndexOf(","));
+                    returnString += "]}";
                 }
+                response.getWriter().println(returnString);
+            } else {
+                if (!results.isEmpty()) {
+                    response.setContentType("text/plain");
+                    returnString =
+                            "---------------------------------------------------------------------------------------------------------------------------------------\n"
+                                    + "                                                                 RESULTS\n"
+                                    +
+                                    "---------------------------------------------------------------------------------------------------------------------------------------\n";
+                    for (String result : results) {
+                        returnString += result + "\n --------------------------------------------------------------------------------------------------------------------------------------- \n";
+                    }
+                }
+                response.getWriter().write(returnString);
             }
         }
-
-        response.getWriter().write(returnString);
     }
 
 }

@@ -114,67 +114,73 @@
     <!-- left pane wrapper -->
     <div class="right-pane">
         <div class="container-fluid">
-            <div class="row row-centered app-listing" id="research-paper-container">
+            <div class="row" id="research-paper-container" style="margin-top: 100px">
+                <div class="col-md-12 msg-issues">
                 <!-- BOF listing block -->
                 <div class="form-group">
-                    <button type="button" onclick="executeSPARQL('title')" class="cu-btn cu-btn-sm cu-btn-blue">
+                    <button type="button" onclick="executeSPARQL('author')" class="cu-btn cu-btn-sm cu-btn-blue"
+                            style=" margin-bottom: 25px; margin-left: 73px">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
-                            </span>
-                        Get All Titles
-                    </button>
-                    <button type="button" onclick="executeSPARQL('author')" class="cu-btn cu-btn-sm cu-btn-blue">
-                            <span class="fw-stack fw-lg btn-action-ico">
-                                <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
+                                <i class="fw fw-lifecycle fw-stack-1x"></i>
                             </span>
                         Get All Authors
                     </button>
-                    <button type="button" onclick="executeSPARQL('abstract')" class="cu-btn cu-btn-sm cu-btn-blue">
+                    <button type="button" onclick="executeSPARQL('abstract')" class="cu-btn cu-btn-sm cu-btn-blue"
+                            style=" margin-bottom: 25px; ">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
+                                <i class="fw fw-lifecycle fw-stack-1x"></i>
                             </span>
                         Get All Abstracts
                     </button>
-                    <button type="button" onclick="executeSPARQL('introduction')" class="cu-btn cu-btn-sm cu-btn-blue">
+                    <button type="button" onclick="executeSPARQL('introduction')" class="cu-btn cu-btn-sm cu-btn-blue"
+                            style=" margin-bottom: 25px; ">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
+                                <i class="fw fw-lifecycle fw-stack-1x"></i>
                             </span>
                         Get All Introductions
                     </button>
-                    <button type="button" onclick="executeSPARQL('methodology')" class="cu-btn cu-btn-sm cu-btn-blue">
+                    <button type="button" onclick="executeSPARQL('methodology')" class="cu-btn cu-btn-sm cu-btn-blue"
+                            style=" margin-bottom: 25px; ">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
+                                <i class="fw fw-lifecycle fw-stack-1x"></i>
                             </span>
                         Get All Methodologies
                     </button>
-                    <button type="button" onclick="executeSPARQL('keyword')" class="cu-btn cu-btn-sm cu-btn-blue">
+                    <button type="button" onclick="executeSPARQL('keyword')" class="cu-btn cu-btn-sm cu-btn-blue"
+                            style=" margin-bottom: 25px; ">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
+                                <i class="fw fw-lifecycle fw-stack-1x"></i>
                             </span>
                         Get All Keywords
                     </button>
-                    <button type="button" onclick="executeSPARQL('conclusion')" class="cu-btn cu-btn-sm cu-btn-blue">
+                    <button type="button" onclick="executeSPARQL('conclusion')" class="cu-btn cu-btn-sm cu-btn-blue"
+                            style=" margin-bottom: 25px; ">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
+                                <i class="fw fw-lifecycle fw-stack-1x"></i>
                             </span>
                         Get All Conclusions
                     </button>
-                    <button type="button" onclick="executeSPARQL('literatureReview')" class="cu-btn cu-btn-sm cu-btn-blue">
+                    <button type="button" onclick="executeSPARQL('literatureReview')"
+                            class="cu-btn cu-btn-sm cu-btn-blue" style=" margin-bottom: 25px; ">
                             <span class="fw-stack fw-lg btn-action-ico">
                                 <i class="fw fw-ring fw-stack-2x"></i>
-                                <i class="fw fw-add fw-stack-1x"></i>
+                                <i class="fw fw-lifecycle fw-stack-1x"></i>
                             </span>
                         Get All Literature Reviews
                     </button>
                 </div>
+                </div>
             </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-6 lifecycle-event-history">
+            <h4>Available Research Papers</h4>
+            <div id="research-papers-titles"></div>
         </div>
         <!-- /.container -->
         <div id="push"></div>
@@ -232,6 +238,28 @@
             leftPane.animate({"left":"0em"}, "slow");
             $(this).find('i').removeClass('fa-reorder').addClass('fa-arrow-left');
         }
+    });
+
+    $(document).ready(function () {
+        $.get("sqarql?select=title",
+                function (data) {
+                    if (!$.isEmptyObject(data)) {
+                        data = jQuery.parseJSON(data);
+                        var content = '<table class="table table-condensed table-borderless table-buildlogs"><tbody>';
+                        $(data.titles).each(function () {
+                            content +=
+                                    '<tr>' +
+                                    '<td>' +
+                                    '<span class="table-notification-msg table-noti-success"></span>' +
+                                    '<i class="fw fw-ok table-notification-i noti-success"></i>' +
+                                    '</td>' +
+                                    '<td>' + this + '</td>' +
+                                    '</tr>';
+                        });
+                        content += '</tbody></table>';
+                        $("#research-papers-titles").html(content);
+                    }
+                });
     });
 
 </script>
